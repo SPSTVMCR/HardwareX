@@ -19,14 +19,17 @@
     --bs-white-rgb: 255, 255, 255;
     --bs-black-rgb: 0, 0, 0;
     --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-body-bg: #132022
 }
+
 .monochrome-white {
-    filter:invert(100%) grayscale(100%);
+    filter: invert(100%) grayscale(100%);
 }
 
 body {
     margin: 0;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-light)
 }
 
 .navbar {
@@ -48,6 +51,7 @@ body {
         padding: 14px 16px;
         text-decoration: none;
         font-size: 16px;
+        transition: all 0.3s;
     }
 
     a:hover {
@@ -84,6 +88,7 @@ body {
 
 .logo:hover {
     background-color: var(--bs-dark) !important;
+
 }
 
 .active {
@@ -102,6 +107,7 @@ body {
         text-decoration: none;
         font-size: 16px;
         border: none;
+        transition: all 0.3s;
     }
 
     .dropdown-content {
@@ -133,6 +139,7 @@ body {
         text-decoration: none;
         font-size: 16px;
         border: none;
+        transition: all 0.3s;
     }
 
     .dropdown-content-account {
@@ -143,11 +150,13 @@ body {
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         right: 0;
+        transition: all 0.3s;
     }
 }
 
 .dropbtn:hover {
     background-color: var(--bs-info);
+
 }
 
 
@@ -159,7 +168,7 @@ body {
     height: 400px;
     background-image: url("HARDWAREX.png");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
 .search {
@@ -217,6 +226,7 @@ body {
 
 
 }
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
@@ -230,7 +240,7 @@ body {
 
 .dropbtn:hover {
     background-color: var(--bs-warning);
-    color: var(--bs-black-rgb);
+    color: var(--bs-dark);
 }
 
 
@@ -273,6 +283,7 @@ body {
     }
 }
 
+//Responsive
 @media screen and (max-width: 600px) {
 
     .navbar a:not(:first-child),
@@ -296,13 +307,14 @@ body {
     .navbar a.icon {
         float: right;
         display: block;
+        transition: all 0.3s;
     }
 
     .navbar a.icon:hover {
         background-color: var(--bs-info);
     }
 
-    
+
 
 
 }
@@ -359,6 +371,7 @@ body {
             margin-bottom: 0px;
         }
     }
+
     .banner {
         background-image: url("HARDWAREXmobile.png");
         background-position: center;
@@ -372,6 +385,7 @@ body {
         right: 0;
         top: 0;
     }
+
     .navbar.responsive #account-mobile {
         position: absolute;
         right: 0;
@@ -380,4 +394,101 @@ body {
     }
 }
 
+// Product list styles
+.products {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    height: max-content;
+    white-space: nowrap;
+    /* Prevent product wrapping */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    scrollbar-color: var(--bs-info) var(--bs-dark);
+    
 
+    .product {
+        right: 0;
+        margin: 10px;
+        min-width: 200px;
+        /* Set a minimum width for each product */
+        border: var(--bs-info) solid 1px;
+        padding: 8px;
+        margin-right: 10px;
+        display: flexbox;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-info {
+            display: block;
+            top: 0;
+        }
+
+        .product-category {
+            text-align: left;
+            color: var(--bs-light);
+            background-color: var(--bs-secondary);
+            padding: 5px;
+        }
+
+        .product-name {
+            display: flex;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 5px 0px;
+            height: 20vh;
+            flex-wrap: wrap;
+            text-wrap: wrap;
+            /* Allow product name to wrap onto multiple lines */
+
+        }
+
+        .product-btn {
+            width: 100%;
+            position: relative;
+            margin-top: 10px;
+            top: auto;
+            background-color: var(--bs-primary);
+            border: none;
+            color: var(--bs-light);
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .product-price {
+            text-align: left;
+            display: block;
+
+            h5 {
+                margin: 0px;
+                padding: 0px;
+                color: var(--bs-info)
+            }
+        }
+
+        .product-btn:hover {
+            background-color: var(--bs-success);
+        }
+    }
+}
+
+.hot-products {
+    h1 {
+        background-color: var(--bs-warning);
+        color: var(--bs-dark);
+        padding: 10px;
+        padding-left: 1vw;
+    }
+}
