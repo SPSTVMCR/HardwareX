@@ -30,24 +30,35 @@
         <a href="" class="active">Trang chủ</a>
         <a href="">Giới thiệu</a>
         <div class="dropdown">
-            <button class="dropbtn">Sản phẩm
-                <i class="fa fa-caret-down"></i>
+            <button class="dropbtn" onclick="toggleDropdown(); iconDropdown()">Sản phẩm
+              <i id="icon-dropdown" class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
-                <a href="">Laptop</a>
-                <a href="">PC</a>
-                <a href="">Phụ kiện</a>
+            <div class="dropdown-content" id="productDropdown">
+              <a href="#">PC</a>
+              <a href="#">Laptop</a>
+              <a href="#">Phụ kiện</a>
             </div>
-        </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn-account" onclick="toggleDropdownAccount(); iconDropdownAccount()">Tài khoản
+              <i id="icon-dropdown-account" class="fa fa-user"></i>
+            </button>
+            <div class="dropdown-content" id="accountDropdown">
+              <a href="#">Giỏ hàng<i style="margin-left: 2px;" class="fa fa-shopping-cart"></i></a>
+              <a href="#">Đăng nhập<i style="margin-left: 2px;" class="fa fa-sign-in"></i></a>
+              <a href="#">Đăng kí</a>
+            </div>
+        </div> 
         <div class="search">
             <input type="text" placeholder="Tìm kiếm sản phẩm">
             <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
         </div>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
+        <a href="mobileaccountpage.html" style="font-size:15px;" id="account-mobile" class="icon monochrome-white">&#128100;</a>
     </div>
 
     <!-- Banner -->
-    <!-- <div class="banner"><img src="HARDWAREX.png" alt="BANNER"></div> -->
+    <div class="banner"></div>
 
 
 
