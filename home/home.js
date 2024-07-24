@@ -74,31 +74,127 @@ let hotProductList = [
     subcategory: "Gaming",
   },
   {
-    name: "Laptop Asus TUF Gaming A15 FA506NF-HN005W (AMD Ryzen 5-7535HS)",
+    name: "ASUS V241E V241EAT-BA030W",
     price: "20.000.000đ",
-    img: "https://lh3.googleusercontent.com/H_IYdCggl7PzlnWqNw2m6xlhYoN_Xps-t5UTXML5zRqaB5Z7peaAajgntlaolhNoPHhj2BBXmnFbN8ejVhfJ8ssFl2uLbvuw=w1000-rw",
-    cpu: "AMD Ryzen 5-7535HS",
+    img: "https://lh3.googleusercontent.com/2bf_cTuJuVqjWBDXSs_ZsvLupLML2BYdSd0HGTpU-Icjc7cITXVV2moyanz2_PgXcbNNgKr3QaONwR0Wxi6oozfmK7DR3_54=w1000-rw",
+    cpu: "Intel Core i3-1115G4",
     ram: "8GB",
-    screen: "15.6 FHD (1920 x 1080) IPS 144Hz",
-    card: "NVIDIA GeForce RTX 3050",
-    storage: "512GB SSD",
-    category: "Laptop",
-    subcategory: "Gaming"
-  },
-  {
-    name: "Laptop Asus TUF Gaming A15 FA506NF-HN005W (AMD Ryzen 5-7535HS)",
-    price: "20.000.000đ",
-    img: "https://lh3.googleusercontent.com/H_IYdCggl7PzlnWqNw2m6xlhYoN_Xps-t5UTXML5zRqaB5Z7peaAajgntlaolhNoPHhj2BBXmnFbN8ejVhfJ8ssFl2uLbvuw=w1000-rw",
-    cpu: "AMD Ryzen 5-7535HS",
-    ram: "8GB",
-    screen: "15.6 FHD (1920 x 1080) IPS 144Hz",
-    card: "NVIDIA GeForce RTX 3050",
-    storage: "512GB SSD",
-    category: "Laptop",
-    subcategory: "Gaming"
+    screen: "23.8' FHD (1920 x 1080) IPS 60Hz, cảm ứng",
+    card: "NVIDIA GeForce MX250",
+    storage: "256GB SSD",
+    category: "PC",
+    subcategory: "Văn phòng",
   },
 
-]
+  {
+    name: "Dell Vostro 3020T",
+    price: "15.000.000đ",
+    img: "https://lh3.googleusercontent.com/K5JIz9Aep3E0qDD6WdQkXKPywCc0iCxYnmO7rV5heU9dBhoyJ8tpfdDltCYq6Fo1e0i8QI7EbbqET7_PmJ6iCOutwE89EbQZ=w1000-rw",
+    cpu: "Intel Core i5-13400",
+    ram: "8GB",
+    screen: "Không",
+    card: "Intel UHD Graphics 730",
+    storage: "256GB SSD + 1TB HDD",
+    category: "PC",
+    subcategory: "Văn phòng",
+  },
+
+  {
+    name: "Chuột gaming không dây Logitech G903 Hero",
+    price: "2.590.000đ",
+    img: "https://lh3.googleusercontent.com/GWRUOlDFdoRsVTGJ8SCSKc_iT4HxTipbhL_1FyWFTSQijdpOLIDWwcm-aEtYIf0F1zJoEoaMiGkabuyej6sl61ne-iWvNN0=w1000-rw",
+    cpu: "Không",
+    ram: "Không",
+    screen: "Không",
+    card: "Không",
+    storage: "Không",
+    category: "Phụ kiện",
+    subcategory: "Chuột",
+  },
+];
+let macbookList = [
+  {
+    name: "Macbook Air M3 2024",
+    price: "35.000.000đ",
+    img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-midnight-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034",
+    cpu: "M3",
+    ram: "8GB",
+    screen: "13.6 FHD (2560 x 1600) IPS 144Hz",
+    card: "M1",
+    storage: "512GB SSD",
+    category: "Laptop",
+    subcategory: "Văn phòng",
+  },
+  {
+    name: "Macbook Pro M3 2023",
+    price: "50.000.000đ",
+    img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-m3-max-pro-spaceblack-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830118",
+    cpu: "M3",
+    ram: "16GB",
+    screen: "13.6 FHD (2560 x 1600) IPS 144Hz",
+    card: "M1",
+    storage: "512GB SSD",
+    category: "Laptop",
+    subcategory: "Văn phòng",
+  },
+
+  {
+    name: "Macbook Pro M1",
+    price: "40.000.000đ",
+    img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830118",
+    cpu: "M1",
+    ram: "16GB",
+    screen: "13.6 FHD (2560 x 1600) IPS 144Hz",
+    card: "M1",
+    storage: "512GB SSD",
+    category: "Laptop",
+    subcategory: "Văn phòng",
+  },
+
+  {
+    name: "Macbook Air M1",
+    price: "27.000.000đ",
+    img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-spacegray-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034",
+    cpu: "M1",
+    ram: "8GB",
+    screen: "13.6 FHD (2560 x 1600) IPS 144Hz",
+    card: "M1",
+    storage: "512GB SSD",
+    category: "Laptop",
+    subcategory: "Văn phòng",
+  },
+
+  {
+    name: "iMac 24 M3 4.5k Retina (8C CPU/8C GPU/16GB/256GB SSD)",
+    price: "50.000.000đ",
+    img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-24-no-id-blue-selection-hero-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1701459101618", 
+    cpu: "M3",
+    ram: "16GB",
+    screen: "24' Retina  (4480 x 2520)",
+    card: "M1",
+    storage: "512GB SSD",
+    category: "PC",
+    subcategory: "Gaming",
+  },
+
+  {
+    name: "Mac mini M2 (8 Core CPU / 10 Core GPU/16GB/512GB)",
+    price: "30.000.000đ",
+    img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-mini-pro-hero-202301_FMT_WHH?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671504063793",
+    cpu: "M2",
+    ram: "16GB",
+    screen: "Không",
+    card: "M2",
+    storage: "512GB SSD",
+    category: "PC",
+    subcategory: "Gaming",
+  },
+
+
+
+];
+
+localStorage.setItem("macbookList", JSON.stringify(macbookList));
 localStorage.setItem("hotProductList", JSON.stringify(hotProductList));
 
 
@@ -181,5 +277,61 @@ function renderHotProducts() {
       </div>
     `;
   }
-}
+};
+function renderMacProducts() {
+  let macbookList = JSON.parse(localStorage.getItem("macbookList"));
+  let products = document.querySelector(".mac-products");
+  for (let i = 0; i < macbookList.length; i++) {
+    products.innerHTML += `
+      <div class="product">
+        <div class="product-category">${macbookList[i].category}</div>
+        <div class="product-img">
+          <img src="${macbookList[i].img}">
+        </div>
+        <div class="product-info">
+          <div class="product-name">
+          <h4>${macbookList[i].name}</h4>
+          </div>
+          <div class="product-price">
+          <h5>${macbookList[i].price}</h5></div>
+          <div class="product-subcategory">${macbookList[i].category+": "+macbookList[i].subcategory}</div>
+          <div class="product-ram">${"RAM"+": "+macbookList[i].ram}</div>
+          <div class="product-storage">${"ROM"+": "+macbookList[i].storage}</div>
+          <div class="product-cpu">${"CPU"+": "+macbookList[i].cpu}</div>
+        </div>
+        <button class="product-btn">Thêm vào giỏ hàng</button>
+      </div>
+    `;
+  };
+};
+//Animations for footer on scroll
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animation-enabled-footer");
+      return;
+    }
+
+    entry.target.classList.remove("animation-enabled-footer");
+  });
+});
+let footer = document.querySelector(".footer");
+observer.observe(footer);
+
+//Animations for product on scroll
+const productObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animation-enabled-footer");
+      return;
+    } 
+    entry.target.classList.remove("animation-enabled-footer");
+  });
+});
+
+let productToAnimate = document.querySelectorAll(".product");
+productToAnimate.forEach((element) => observer.observe(element));
+renderMacProducts();
 renderHotProducts();
+
