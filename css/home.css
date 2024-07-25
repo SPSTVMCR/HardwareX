@@ -390,7 +390,7 @@ footer h3 {
   padding-bottom: 20px;
   width: 100%;
   height: 400px;
-  background-image: url("HARDWAREX.png");
+  background-image: url("../assets/HARDWAREX.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -510,7 +510,7 @@ footer h3 {
     margin-right: 0px;
   }
   .banner {
-    background-image: url("HARDWAREXmobile.png");
+    background-image: url("../assets/HARDWAREXmobile.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
