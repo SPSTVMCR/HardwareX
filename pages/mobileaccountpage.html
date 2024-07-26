@@ -1,7 +1,4 @@
-<!--Final Project: Create a merketplace store webpage with HTML and JS-->
-<!--The website design and code is licensed under the BSD 3 Clause Clear license, found in the LICENSE file-->
-<!--The website's demo content (images, text, and videos) are properties of their respective owners. DO NOT USE THEM FOR COMMERCIAL PURPOSES, change them.-->
-
+<!--Mobile account page-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/mobileaccountpage/mobileaccountpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
@@ -19,8 +16,7 @@
             font-family: 'Tahoma', sans-serif;
         }
     </style>
-    <title>Trang chủ</title>
-
+    <title>Taikhoan</title>
 </head>
 
 <body>
@@ -59,22 +55,12 @@
             class="icon monochrome-white">&#128100;</a>
     </div>
 
-    <!-- Banner -->
-    <div class="banner"></div>
-    <!--Content-->
-    <div class="content-container">
-        <div class="hot-products">
-            <h1><i class="fa fa-fire" aria-hidden="true"></i> SẢN PHẨM NỔI BẬT <i class="fa fa-fire"
-                    aria-hidden="true"></i></h1>
-            <div class="products">
-
-            </div>
-        </div>
-        <div class="macbooks">
-            <h1>APPLE <i class="fa fa-apple" aria-hidden="true"></i></h1>
-            <div class="mac-products">
-            </div>
-        </div>
+    <!--Buttons-->
+    <div class="button-container">
+        <button class="button" id="signup-button">Đăng kí  <i class="fa fa-user-plus"></i></button>
+        <button class="button" id="login-button">Đăng nhập  <i class="fa fa-sign-in"></i></button>
+        <button class="button" id ="cart-button">Giỏ hàng  <i class="fa fa-shopping-cart"></i></button>
+        <button class="button" id ="account-button">Thông tin tài khoản  <i class="fa fa-info-circle"></i></button>
     </div>
     <!--Footer-->
     <footer class="footer">
@@ -113,6 +99,6 @@
         </div>
     </footer>
 
-    <!-- Functional JS -->
-    <script src="../js/home.js"></script>
+    <!--JavaScript-->
+    <script src="../js/mobileaccountpage.js"></script>
 </body>
