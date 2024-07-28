@@ -139,7 +139,7 @@ let macbookList = [
   },
 
   {
-    name: "Macbook Pro M1",
+    name: "Macbook Pro M1 2023",
     price: "40.000.000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830118",
     cpu: "M1",
@@ -152,7 +152,7 @@ let macbookList = [
   },
 
   {
-    name: "Macbook Air M1",
+    name: "Macbook Air M1 2023",
     price: "27.000.000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-spacegray-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034",
     cpu: "M1",
