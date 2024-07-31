@@ -57,6 +57,7 @@
     padding: 0% !important;
     border: none !important;
     background-color: var(--bs-dark) !important;
+    animation: fade-in 0.6s;
 }
 td {
     padding-right: 0px !important;
@@ -292,6 +293,7 @@ footer * {
         text-decoration: none;
         font-size: 16px;
         transition: all 0.3s;
+        animation: swipe-in-left-to-right 0.6s;
     }
 
     a:hover {
@@ -308,6 +310,7 @@ footer * {
         padding: 14px 16px;
         text-decoration: none;
         font-size: 16px;
+        animation: swipe-in-left-to-right 0.5s;
     }
 
     .icon {
@@ -348,6 +351,7 @@ footer * {
         font-size: 16px;
         border: none;
         transition: all 0.3s;
+        animation: swipe-in-left-to-right 0.8s;
     }
 
     .dropdown-content {
@@ -464,6 +468,9 @@ footer * {
     margin-bottom: 5px;
     height: 50%;
 
+    a {
+        width: 100vw;
+    }
     button {
         border: none;
         width: 100%;
@@ -471,7 +478,8 @@ footer * {
         font-size: large;
         padding: 10px;
         margin-bottom: 5px;
-        transition: all 0.3s;
+        // transition: all 0.3s;
+        animation: swipe-in-left-to-right 0.8s;
 
     }
     #signup-button {
@@ -479,6 +487,7 @@ footer * {
         color: var(--bs-dark);
         position: relative;
         top: 0%;
+        animation: swipe-in-left-to-right 0.6s;
     }
 
     #login-button {
@@ -487,6 +496,7 @@ footer * {
         border: var(--bs-info) solid 2px;
         position: relative;
         top: 0%;
+        animation: swipe-in-left-to-right 0.7s;
     }
 
     #account-button {
@@ -494,6 +504,7 @@ footer * {
         color: var(--bs-dark);
         position: relative;
         top: 0%;
+        animation: swipe-in-left-to-right 0.9s;
     }
 
     button:hover, button:active , button:focus,
@@ -505,6 +516,7 @@ footer * {
     }
 
 }
+
 //Responsive
 @media screen and (max-width: 600px) {
 

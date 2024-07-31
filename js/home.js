@@ -320,18 +320,19 @@ let footer = document.querySelector(".footer");
 observer.observe(footer);
 
 //Animations for product on scroll
-const productObserver = new IntersectionObserver(entries => {
+const h1Observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("animation-enabled-footer");
+      entry.target.classList.add("animated-h1");
       return;
-    } 
-    entry.target.classList.remove("animation-enabled-footer");
+    }
+
+    entry.target.classList.remove("animated-h1");
   });
 });
+let h1 = document.querySelectorAll(".sec-header");
+h1.forEach((element) => h1Observer.observe(element));
 
-let productToAnimate = document.querySelectorAll(".product");
-productToAnimate.forEach((element) => observer.observe(element));
 renderMacProducts();
 renderHotProducts();
 
