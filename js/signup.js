@@ -47,31 +47,33 @@ function expand() {
     }
     document.getElementById("icon-dropdown-account").style.transition = "transform 0.3s";
   }
-  
-//Display the user info from local storage (loggedInUser)
-let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-document.getElementById("email").innerText = "Email: " + loggedInUser.email;
-document.getElementById("password").innerText = "Password: " + loggedInUser.password;
 
-//Sign out function
-function signOut() {
-  localStorage.setItem("loggedIn", false);
-  //Reset the loggedInUser variable
-  localStorage.setItem("loggedInUser", null);
-  window.location.href = "home.html";
-}
-
-//Animations for footer on scroll
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animation-enabled-footer");
-        return;
-      }
-  
-      entry.target.classList.remove("animation-enabled-footer");
-    });
-  });
-  let footer = document.querySelector(".footer");
-  observer.observe(footer);
+  //Actual account credentials storing
+  let accountList = JSON.parse(localStorage.getItem("accountList")) || [];
+  function signup() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirm-password").value;
+    if (email === "" || password === "" || confirmPassword === "") {
+      alert("All fields are required");
+    } else if (password !== confirmPassword) {
+      alert("Passwords do not match");
+    } else if (accountList.some((account) => account.email === email)) { //some: check if there is an account with the same email
+      alert("Email already exists");
+    } else if (password.length < 8) {
+      alert("Password must be at least 8 characters long");
+    }
+      else if (!/\S+@\S+\.\S+/.test(email)) { //Check if the email field is an email (regular expression)
+      alert("Invalid email address");
+    }
+      else {
+      let account = {
+        email: email,
+        password: password,
+      };
+      accountList.push(account);
+      localStorage.setItem("accountList", JSON.stringify(accountList));
+      alert("Account created successfully");
+      window.location.href = "login.html";
+    }
+  }

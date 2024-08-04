@@ -1,3 +1,6 @@
+//A cross-site variable to determine if the user is logged in or not stored in local storage
+let loggedIn = localStorage.getItem("loggedIn") || "false";
+
 let topnav = document.getElementById("topnav");
 
 let hotProductList = [
@@ -248,7 +251,29 @@ function iconDropdownAccount() {
   }
   document.getElementById("icon-dropdown-account").style.transition = "transform 0.3s";
 }
-
+//Add product to cart function
+function addProductToCart(element) {
+  let productInfo = element.parentElement;
+    let product = {
+      name: productInfo.querySelector(".product-name h4").innerHTML,
+      price: productInfo.querySelector(".product-price h5").innerHTML,
+      img: productInfo.querySelector(".product-img img").getAttribute("src"),
+      category: productInfo.querySelector(".product-category").innerHTML,
+      subcategory: productInfo.querySelector(".product-subcategory").innerHTML,
+      ram: productInfo.querySelector(".product-ram").innerHTML,
+      storage: productInfo.querySelector(".product-storage").innerHTML,
+      cpu: productInfo.querySelector(".product-cpu").innerHTML
+    };
+    if (localStorage.getItem("cart") == null) {
+      let cart = [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    } else {
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+}
 //Render hot products
 
 function renderHotProducts() {
@@ -273,7 +298,7 @@ function renderHotProducts() {
           <div class="product-storage">${"ROM"+": "+hotProductList[i].storage}</div>
           <div class="product-cpu">${"CPU"+": "+hotProductList[i].cpu}</div>
         </div>
-        <button class="product-btn">Thêm vào giỏ hàng</button>
+        <button class="product-btn" onclick="addProductToCart(this)">Thêm vào giỏ hàng</button>
       </div>
     `;
   }
@@ -299,11 +324,13 @@ function renderMacProducts() {
           <div class="product-storage">${"ROM"+": "+macbookList[i].storage}</div>
           <div class="product-cpu">${"CPU"+": "+macbookList[i].cpu}</div>
         </div>
-        <button class="product-btn">Thêm vào giỏ hàng</button>
+        <button class="product-btn" onclick="addProductToCart(this)" >Thêm vào giỏ hàng</button>
       </div>
     `;
   };
 };
+
+
 //Animations for footer on scroll
 
 const observer = new IntersectionObserver(entries => {

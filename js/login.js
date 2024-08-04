@@ -1,3 +1,9 @@
+window.onload = function () {
+  if (localStorage.getItem("loggedIn") === "true") {
+    window.location.href = "home.html";
+  }
+}
+
 function expand() {
     if (topnav.className === "navbar") {
       topnav.className += " responsive";
@@ -48,3 +54,28 @@ function expand() {
     document.getElementById("icon-dropdown-account").style.transition = "transform 0.3s";
   }
 
+//Actual login function
+function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let accountList = JSON.parse(localStorage.getItem("accountList")) || [];
+
+  for (let i = 0; i < accountList.length; i++) {
+    if (email === accountList[i].email && password === accountList[i].password) {
+      alert("Login successful");
+      //Reset the loggedInUser
+      localStorage.setItem("loggedInUser", "");
+      //Set the loggedInUser
+      localStorage.setItem("loggedInUser", JSON.stringify(accountList[i]));
+      //Set the cross-site variable of logged in to true
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "home.html";
+      break; //Exit the loop if login is successful
+    } else if (i === accountList.length - 1) { //Check if it's the last iteration
+      alert("Invalid email or password");
+
+    } else {
+      continue; //Return to the beginning of the loop
+    }
+  }
+}
