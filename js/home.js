@@ -6,7 +6,7 @@ let topnav = document.getElementById("topnav");
 let hotProductList = [
   {
     name: "Laptop Asus TUF Gaming A15 FA506NF-HN005W (AMD Ryzen 5-7535HS)",
-    price: "20.000.000đ",
+    price: "20000000đ",
     img: "https://lh3.googleusercontent.com/H_IYdCggl7PzlnWqNw2m6xlhYoN_Xps-t5UTXML5zRqaB5Z7peaAajgntlaolhNoPHhj2BBXmnFbN8ejVhfJ8ssFl2uLbvuw=w1000-rw",
     cpu: "AMD Ryzen 5-7535HS",
     ram: "8GB",
@@ -18,7 +18,7 @@ let hotProductList = [
   },
   {
     name: "Laptop Acer Nitro 5 Tiger AN515-58-52SP (Intel Core i5-12500H)",
-    price: "20.000.000đ",
+    price: "20000000đ",
     img: "https://lh3.googleusercontent.com/uiLQNTEqazg6MB8Uv8stnPE0WP-GV86TD8JgOlFUaqMcsBr89rOZwsX3KklJ9nDWXLYutoCM-5xeRw7l-U_1jbVsGWl5aPvLgg=w1000-rw",
     cpu: "Intel Core i5-12500H",
     ram: "8GB",
@@ -30,7 +30,7 @@ let hotProductList = [
   },
   {
     name: "Màn hình LCD ACER 23.8 K243Y E (UM.QX3SV.E01)",
-    price: "2.590.000đ",
+    price: "2590000đ",
     img: "https://lh3.googleusercontent.com/2n6AmF7YzgI1yRunu8acH4ZWKR-S-cINiL8IT3zSBBOzJ96nbqaOV1gJcC4vVVW6rboqnQSMgR-M2VWy6vQU4QW3jmd7dchE=w1000-rw",
     cpu: "Không",
     ram: "Không",
@@ -42,7 +42,7 @@ let hotProductList = [
   },
   {
     name: "Laptop HP Pavilion 14-dv2071TU (7C0W0PA) (i7-1255U)",
-    price: "25.000.000đ",
+    price: "25000000đ",
     img: "https://lh3.googleusercontent.com/KY8QnPjJjfTQoQ_9OrvU7jXd47WuSwXxKFCEeUq_47_4RjfvSQoIfZuS8f2tvvhfcGvPqMJFpf7CGGjY5GPjaOxCZaIidCwj=w1000-rw",
     cpu: "Intel Core i7-1255U",
     ram: "8GB",
@@ -54,7 +54,7 @@ let hotProductList = [
   },
   {
     name: "USB SanDisk 64GB (SDCZ600-G35)",
-    price: "139.000đ",
+    price: "139000đ",
     img: "https://lh3.googleusercontent.com/9VET2A7-U8C8sGQyAFR4a0rfaNqeDDdZ1moM1fZLi1fK7CkdfCLiiACMs0btLhD1D61Xp16mXKH5bR03lPT4bunk5D4yw-lM=w1000-rw",
     cpu: "Không",
     ram: "Không",
@@ -66,7 +66,7 @@ let hotProductList = [
   },
   {
     name: "Laptop Lenovo LOQ 15IAX9 - 83GS001SVN (Intel Core i5-12450HX)",
-    price: "20.000.000đ",
+    price: "20000000đ",
     img: "https://lh3.googleusercontent.com/5JUDQweseDyNaAswp-9DUoprkuf-otENcJAJsj_i9d5mbBvWOWPhquDgoUHqaASNfeTRZftP1pY1Yj4JdW2uTvkcxPmqs3VU=w1000-rw",
     cpu: "Intel Core i5-12450HX",
     ram: "12GB",
@@ -78,7 +78,7 @@ let hotProductList = [
   },
   {
     name: "ASUS V241E V241EAT-BA030W",
-    price: "20.000.000đ",
+    price: "20000000đ",
     img: "https://lh3.googleusercontent.com/2bf_cTuJuVqjWBDXSs_ZsvLupLML2BYdSd0HGTpU-Icjc7cITXVV2moyanz2_PgXcbNNgKr3QaONwR0Wxi6oozfmK7DR3_54=w1000-rw",
     cpu: "Intel Core i3-1115G4",
     ram: "8GB",
@@ -91,7 +91,7 @@ let hotProductList = [
 
   {
     name: "Dell Vostro 3020T",
-    price: "15.000.000đ",
+    price: "15000000đ",
     img: "https://lh3.googleusercontent.com/K5JIz9Aep3E0qDD6WdQkXKPywCc0iCxYnmO7rV5heU9dBhoyJ8tpfdDltCYq6Fo1e0i8QI7EbbqET7_PmJ6iCOutwE89EbQZ=w1000-rw",
     cpu: "Intel Core i5-13400",
     ram: "8GB",
@@ -104,7 +104,7 @@ let hotProductList = [
 
   {
     name: "Chuột gaming không dây Logitech G903 Hero",
-    price: "2.590.000đ",
+    price: "2 590 000đ",
     img: "https://lh3.googleusercontent.com/GWRUOlDFdoRsVTGJ8SCSKc_iT4HxTipbhL_1FyWFTSQijdpOLIDWwcm-aEtYIf0F1zJoEoaMiGkabuyej6sl61ne-iWvNN0=w1000-rw",
     cpu: "Không",
     ram: "Không",
@@ -118,7 +118,7 @@ let hotProductList = [
 let macbookList = [
   {
     name: "Macbook Air M3 2024",
-    price: "35.000.000đ",
+    price: "35000000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-midnight-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034",
     cpu: "M3",
     ram: "8GB",
@@ -130,7 +130,7 @@ let macbookList = [
   },
   {
     name: "Macbook Pro M3 2023",
-    price: "50.000.000đ",
+    price: "50000000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-m3-max-pro-spaceblack-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830118",
     cpu: "M3",
     ram: "16GB",
@@ -143,7 +143,7 @@ let macbookList = [
 
   {
     name: "Macbook Pro M1 2023",
-    price: "40.000.000đ",
+    price: "40000000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-spacegray-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830118",
     cpu: "M1",
     ram: "16GB",
@@ -156,7 +156,7 @@ let macbookList = [
 
   {
     name: "Macbook Air M1 2023",
-    price: "27.000.000đ",
+    price: "27000000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-spacegray-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034",
     cpu: "M1",
     ram: "8GB",
@@ -169,7 +169,7 @@ let macbookList = [
 
   {
     name: "iMac 24 M3 4.5k Retina (8C CPU/8C GPU/16GB/256GB SSD)",
-    price: "50.000.000đ",
+    price: "50000000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-24-no-id-blue-selection-hero-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1701459101618", 
     cpu: "M3",
     ram: "16GB",
@@ -182,7 +182,7 @@ let macbookList = [
 
   {
     name: "Mac mini M2 (8 Core CPU / 10 Core GPU/16GB/512GB)",
-    price: "30.000.000đ",
+    price: "30000000đ",
     img: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-mini-pro-hero-202301_FMT_WHH?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671504063793",
     cpu: "M2",
     ram: "16GB",
@@ -273,6 +273,7 @@ function addProductToCart(element) {
       cart.push(product);
       localStorage.setItem("cart", JSON.stringify(cart));
     }
+    alert("Sản phẩm đã được thêm vào giỏ hàng.");
 }
 //Render hot products
 

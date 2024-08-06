@@ -21,50 +21,70 @@
 </head>
 
 <body>
-        <!--Navigation bar-->
-        <div id="topnav" class="navbar">
-            <a class="logo">HARDWAREX</a>
-            <a href="home.html">Trang chủ</a>
-            <a href="">Giới thiệu</a>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="toggleDropdown(); iconDropdown()">Sản phẩm
-                    <i id="icon-dropdown" class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content" id="productDropdown">
-                    <a href="#">PC</a>
-                    <a href="#">Laptop</a>
-                    <a href="#">Phụ kiện</a>
-                </div>
+    <!--Navigation bar-->
+    <div id="topnav" class="navbar">
+        <a class="logo">HARDWAREX</a>
+        <a href="home.html">Trang chủ</a>
+        <a href="">Giới thiệu</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown(); iconDropdown()">Sản phẩm
+                <i id="icon-dropdown" class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="productDropdown">
+                <a href="#">PC</a>
+                <a href="#">Laptop</a>
+                <a href="#">Phụ kiện</a>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn-account" onclick="toggleDropdownAccount(); iconDropdownAccount()">Tài khoản
-                    <i id="icon-dropdown-account" class="fa fa-user"></i>
-                </button>
-                <div class="dropdown-content" id="accountDropdown">
-                    <a href="#" class="active">Giỏ hàng<i style="margin-left: 2px;" class="fa fa-shopping-cart"></i></a>
-                    <a href="login.html" >Đăng nhập<i style="margin-left: 2px;" class="fa fa-sign-in"></i></a>
-                    <a href="signup.html">Đăng kí</a>
-                    <a href="accountpage.html">Thông tin <i style="margin-left: 2px;" class="fa fa-info-circle"></i></a>
-                </div>
-            </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
-            <a href="../pages/mobileaccountpage.html" style="font-size:15px;" id="account-mobile"
-                class="icon monochrome-white">&#128100;</a>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn-account" onclick="toggleDropdownAccount(); iconDropdownAccount()">Tài khoản
+                <i id="icon-dropdown-account" class="fa fa-user"></i>
+            </button>
+            <div class="dropdown-content" id="accountDropdown">
+                <a href="#" class="active">Giỏ hàng<i style="margin-left: 2px;" class="fa fa-shopping-cart"></i></a>
+                <a href="login.html">Đăng nhập<i style="margin-left: 2px;" class="fa fa-sign-in"></i></a>
+                <a href="signup.html">Đăng kí</a>
+                <a href="accountpage.html">Thông tin <i style="margin-left: 2px;" class="fa fa-info-circle"></i></a>
+            </div>
+        </div>
+        <div class="search">
+            <script async src="https://cse.google.com/cse.js?cx=81216fd6b966248be">
+            </script>
+            <div class="gcse-search"></div>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
+        <a href="../pages/mobileaccountpage.html" style="font-size:15px;" id="account-mobile"
+            class="icon monochrome-white">&#128100;</a>
+    </div>
 
-        <!--Cart-->
-        <div id="cart">
-            <h1>Giỏ hàng</h1>
-            <div id="cart-items">
-                <!--Cart items will be added dynamically here-->
-            </div>
-            <div id="cart-total">
-                <!--Cart total will be added dynamically here-->
-            </div>
-            <div id="cart-buttons">
-                <button id="is-student-discount-toggle-checkbox">Bạn là học sinh/sinh viên</button>
-                <button id="checkout-button">Thanh toán</button>
-                <button id="clear-cart-button">Xóa giỏ hàng</button>
-            </div>
+    <!--Cart-->
+    <div id="cart">
+        <h1 id="cart-title">Giỏ hàng</h1>
+        <div id="cart-items">
         </div>
-        <script src="../js/cart.js"></script>
+        <input type="checkbox" id="is-student-discount-toggle-checkbox">
+        </input>
+        <label for="is-student-discount-toggle-checkbox " id="is-student-discount-toggle-label">Học sinh/sinh
+            viên</label>
+        <div id="cart-buttons">
+            <div id="cart-total">
+            </div>
+            <button id="checkout-button">Thanh toán</button>
+            <button id="clear-cart-button" onclick="clearCart()">Xóa giỏ hàng</button>
+        </div>
+    </div>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: 'JZUf_HfpnZ5NN9jXp',
+            });
+        })();
+    </script>
+    <!--Main Javascript-->
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>
