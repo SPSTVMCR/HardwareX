@@ -275,6 +275,22 @@ function addProductToCart(element) {
     }
     alert("Sản phẩm đã được thêm vào giỏ hàng.");
 }
+//Redirect to detail page
+function redirectToDetail(element) {
+  let selectedProductInfo = element.parentElement;
+  let selectedProduct = {
+    name: selectedProductInfo.querySelector(".product-name h4").innerHTML,
+    price: selectedProductInfo.querySelector(".product-price h5").innerHTML,
+    img: selectedProductInfo.querySelector(".product-img img").getAttribute("src"),
+    category: selectedProductInfo.querySelector(".product-category").innerHTML,
+    subcategory: selectedProductInfo.querySelector(".product-subcategory").innerHTML,
+    ram: selectedProductInfo.querySelector(".product-ram").innerHTML,
+    storage: selectedProductInfo.querySelector(".product-storage").innerHTML,
+    cpu: selectedProductInfo.querySelector(".product-cpu").innerHTML
+}
+  localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+  window.location.href = "../pages/products/productdetail.html";
+}
 //Render hot products
 
 function renderHotProducts() {
@@ -284,12 +300,11 @@ function renderHotProducts() {
     products.innerHTML += `
       <div class="product">
         <div class="product-category">${hotProductList[i].category}</div>
-        <div class="product-img">
+        <div class="product-img" onclick="redirectToDetail(this)">
           <img src="${hotProductList[i].img}">
-        </div>
         <div class="product-info">
-          
-          <div class="product-name">
+        </div>
+          <div class="product-name" >
           <h4>${hotProductList[i].name}</h4>
           </div>
           <div class="product-price">
@@ -311,9 +326,8 @@ function renderMacProducts() {
     products.innerHTML += `
       <div class="product">
         <div class="product-category">${macbookList[i].category}</div>
-        <div class="product-img">
+        <div class="product-img" onclick="redirectToDetail(this)">
           <img src="${macbookList[i].img}">
-        </div>
         <div class="product-info">
           <div class="product-name">
           <h4>${macbookList[i].name}</h4>
