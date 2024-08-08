@@ -47,45 +47,38 @@ function iconDropdownAccount() {
     }
     document.getElementById("icon-dropdown-account").style.transition = "transform 0.3s";
 }
-let selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
-let productImage = document.querySelector(".product-img");
-let productTitle = document.querySelector(".product-title");
-let productPrice = document.querySelector(".product-price");
-let productDescription = document.querySelector(".product-description");
-let productCategory = document.querySelector(".product-category");
-//A cross-site variable to determine if the user is logged in or not stored in local storage
-let loggedIn = localStorage.getItem("loggedIn") || "false";
-function addToCart () {
-    if (loggedIn === "false") {
-        window.location.href = "../pages/login.html";
-    } else {
-        if (localStorage.getItem("cart") === null) {
-            let cart = [];
-            cart.push(selectedProduct);
-            localStorage.setItem("cart", JSON.stringify(cart));
-        } else {
-            let cart = JSON.parse(localStorage.getItem("cart"));
-            cart.push(selectedProduct);
-            localStorage.setItem("cart", JSON.stringify(cart));
-        }
-        alert("Sản phẩm đã được thêm vào giỏ hàng.")
+let hotProductList = JSON.parse(localStorage.getItem("hotProductList"));
+let macbookList = JSON.parse(localStorage.getItem("macbookList"));
+//Filter the PC category from both hotProductList and macbookList, adding it to a new list
+let pcList = [];
+for (let i = 0; i < hotProductList.length; i++) {
+    if (hotProductList[i].category === "PC") {
+        pcList.push(hotProductList[i]);
     }
-
+}
+for (let i = 0; i < macbookList.length; i++) {
+    if (macbookList[i].category === "PC") {
+        pcList.push(macbookList[i]);
+    }
 }
 
-function render () {
-    document.title = selectedProduct.name;
-    productCategory.innerText = selectedProduct.category;
-    productImage.src = selectedProduct.img;
-    productTitle.innerText = selectedProduct.name;
-    productPrice.innerText = selectedProduct.price;
-    productDescription.innerHTML = `
-    <h4 style="color: var(--bs-info)" > Thông số kĩ thuật: </h4>
-    <ul>
-    <li style="color: var(--bs-light)" id="cpu">${selectedProduct.cpu}</li>
-    <li style="color: var(--bs-light)" id="ram">${selectedProduct.ram}</li>
-    <li style="color: var(--bs-light)" id="storage">${selectedProduct.storage}</li>
-    </ul>`
-    ;
+let productContainer = document.querySelector(".item-grid");
+//Render PC products
+function render() {
+    productContainer.innerHTML = "";
+    for (let i = 0; i < pcList.length; i++) {
+        let product = document.createElement("div");
+        product.classList.add("product");
+        product.innerHTML = `
+            <div class="product-image">
+                <img src="${pcList[i].img}" alt="${pcList[i].name}">
+            </div>
+            <div class="product-info">
+                <h3>${pcList[i].name}</h3>
+                <p>${pcList[i].price}</p>
+            </div>
+        `;
+        productContainer.appendChild(product);
+    }
 }
 render();
