@@ -104,7 +104,7 @@ let hotProductList = [
 
   {
     name: "Chuột gaming không dây Logitech G903 Hero",
-    price: "2 590 000đ",
+    price: "2590000đ",
     img: "https://lh3.googleusercontent.com/GWRUOlDFdoRsVTGJ8SCSKc_iT4HxTipbhL_1FyWFTSQijdpOLIDWwcm-aEtYIf0F1zJoEoaMiGkabuyej6sl61ne-iWvNN0=w1000-rw",
     cpu: "Không",
     ram: "Không",
@@ -332,8 +332,10 @@ function renderMacProducts() {
           <div class="product-name">
           <h4>${macbookList[i].name}</h4>
           </div>
+          </div>
           <div class="product-price">
           <h5>${macbookList[i].price}</h5></div>
+        
           <div class="product-subcategory">${macbookList[i].category+": "+macbookList[i].subcategory}</div>
           <div class="product-ram">${"RAM"+": "+macbookList[i].ram}</div>
           <div class="product-storage">${"ROM"+": "+macbookList[i].storage}</div>

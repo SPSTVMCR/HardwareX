@@ -489,6 +489,7 @@ footer h3 {
     flex-wrap: nowrap;
     justify-content: flex-start;
     flex-direction: row;
+    align-items: center;
     height: max-content;
     white-space: nowrap;
     /* Prevent product wrapping */
@@ -500,13 +501,15 @@ footer h3 {
     .product {
         right: 0;
         margin: 10px;
-        min-width: 200px;
-        border: var(--bs-info) solid 1px;
-        padding: 8px;
+        min-width: 250px;
+        border: var(--bs-info) solid 2px;
+        border-radius: 5px;
+        // padding: 8px;
         margin-right: 10px;
         display: flexbox;
         transition: all 0.3s;
         cursor: pointer;
+        background-color: var(--bs-primary);
 
         img {
             width: 100%;
@@ -514,8 +517,17 @@ footer h3 {
         }
 
         .product-info {
-            display: block;
+            display: flex;
             top: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--bs-light);
+            background-color: var(--bs-dark);
+            padding: 5px;
+
+        
         }
 
         .product-category {
@@ -530,20 +542,26 @@ footer h3 {
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-            margin: 5px 0px;
+            margin: 0px;
+            padding: 2px;
             height: 20vh;
             flex-wrap: wrap;
             text-wrap: wrap;
+            background-color: var(--bs-dark);
             /* Allow product name to wrap onto multiple lines */
 
         }
 
         .product-btn {
-            width: 100%;
-            position: relative;
-            margin-top: 10px;
-            top: auto;
-            background-color: var(--bs-primary);
+            width: 90%;
+            transform: translateX(4.5%);
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            margin-top: 15px !important;
+            height: 2rem;
+            border-radius: 4px;
+            background-color: var(--bs-secondary);
             border: none;
             color: var(--bs-dark);
             padding: 5px;
@@ -552,29 +570,37 @@ footer h3 {
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
+            margin-bottom: 8px;
             cursor: pointer;
             transition: all 0.3s;
         }
 
         .product-price {
-            text-align: left;
+            text-align: center;
             display: block;
-
+            background-color: var(--bs-secondary);
+            font-size: 1.75rem;
             h5 {
                 margin: 0px;
-                padding: 0px;
-                color: var(--bs-info)
+                margin-bottom: 10px;
+                padding: 5px;
+                color: var(--bs-dark)
+                
             }
         }
-
+        .product-subcategory, .product-ram, .product-storage, .product-cpu {
+            text-align: center;
+            color: var(--bs-dark);
+        }
         .product-btn:hover {
             background-color: var(--bs-success);
         }
 
         &:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            border: var(--bs-success) solid 1px;
+            border: var(--bs-success) solid 2px;
         }
+        
     }
 }
 
@@ -598,34 +624,45 @@ footer h3 {
     flex-wrap: nowrap;
     justify-content: flex-start;
     flex-direction: row;
+    align-items: center;
     height: max-content;
     white-space: nowrap;
+    /* Prevent product wrapping */
     overflow-x: auto;
+    /* Enable horizontal scrolling */
     scrollbar-color: var(--bs-info) var(--bs-dark);
 
 
     .product {
         right: 0;
         margin: 10px;
-        min-width: 200px;
-        max-width: 200px;
-        border: var(--bs-info) solid 1px;
-        padding: 8px;
-        transition: all 0.3s;
+        min-width: 250px;
+        border: var(--bs-info) solid 2px;
+        border-radius: 5px;
+        // padding: 8px;
         margin-right: 10px;
         display: flexbox;
+        transition: all 0.3s;
         cursor: pointer;
-
+        background-color: var(--bs-primary);
 
         img {
             width: 100%;
             height: 100%;
-            cursor: pointer;
         }
 
         .product-info {
-            display: block;
+            display: flex;
             top: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--bs-light);
+            background-color: var(--bs-dark);
+            padding: 5px;
+
+        
         }
 
         .product-category {
@@ -640,20 +677,26 @@ footer h3 {
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-            margin: 5px 0px;
+            margin: 0px;
+            padding: 2px;
             height: 20vh;
             flex-wrap: wrap;
             text-wrap: wrap;
+            background-color: var(--bs-dark);
             /* Allow product name to wrap onto multiple lines */
 
         }
 
         .product-btn {
-            width: 100%;
-            position: relative;
-            margin-top: 10px;
-            top: auto;
-            background-color: var(--bs-primary);
+            width: 90%;
+            transform: translateX(4.5%);
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            margin-top: 15px !important;
+            height: 2rem;
+            border-radius: 4px;
+            background-color: var(--bs-secondary);
             border: none;
             color: var(--bs-dark);
             padding: 5px;
@@ -662,28 +705,37 @@ footer h3 {
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
+            margin-bottom: 8px;
             cursor: pointer;
             transition: all 0.3s;
         }
 
         .product-price {
-            text-align: left;
+            text-align: center;
             display: block;
-
+            background-color: var(--bs-secondary);
+            font-size: 1.75rem;
             h5 {
                 margin: 0px;
-                padding: 0px;
-                color: var(--bs-info)
+                margin-bottom: 10px;
+                padding: 5px;
+                color: var(--bs-dark)
+                
             }
         }
-
+        .product-subcategory, .product-ram, .product-storage, .product-cpu {
+            text-align: center;
+            color: var(--bs-dark);
+        }
         .product-btn:hover {
             background-color: var(--bs-success);
         }
+
         &:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            border: var(--bs-success) solid 1px;
+            border: var(--bs-success) solid 2px;
         }
+        
     }
 }
 

@@ -49,20 +49,6 @@ function iconDropdownAccount() {
 }
 let hotProductList = JSON.parse(localStorage.getItem("hotProductList"));
 let macbookList = JSON.parse(localStorage.getItem("macbookList"));
-//Filter the PC category from both hotProductList and macbookList, adding it to a new list
-let pcList = [];
-for (let i = 0; i < hotProductList.length; i++) {
-    if (hotProductList[i].category === "PC") {
-        pcList.push(hotProductList[i]);
-    }
-}
-for (let i = 0; i < macbookList.length; i++) {
-    if (macbookList[i].category === "PC") {
-        pcList.push(macbookList[i]);
-    }
-}
-
-let productContainer = document.querySelector(".item-grid");
 //Add product to cart function
 function addProductToCart(element) {
     let productInfo = element.parentElement;
@@ -103,27 +89,41 @@ function addProductToCart(element) {
     localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
     window.location.href = "../../pages/products/productdetail.html";
   }
-//Render PC products
+//Filter the laptop category from both hotProductList and macbookList, adding it to a new list
+let laptopList = [];
+for (let i = 0; i < hotProductList.length; i++) {
+    if (hotProductList[i].category === "Laptop") {
+        laptopList.push(hotProductList[i]);
+    }
+}
+for (let i = 0; i < macbookList.length; i++) {
+    if (macbookList[i].category === "Laptop") {
+        laptopList.push(macbookList[i]);
+    }
+}
+
+let productContainer = document.querySelector(".item-grid");
+//Render laptop products
 function render() {
     productContainer.innerHTML = "";
-    for (let i = 0; i < pcList.length; i++) {
+    for (let i = 0; i < laptopList.length; i++) {
         let product = document.createElement("div");
         product.classList.add("product");
         product.innerHTML = `
-        <div class="product-category">${pcList[i].category}</div>
+        <div class="product-category">${laptopList[i].category}</div>
         <div class="product-img" onclick="redirectToDetail(this)">
-          <img src="${pcList[i].img}">
+          <img src="${laptopList[i].img}">
         <div class="product-info">
         </div>
           <div class="product-name" >
-          <h4>${pcList[i].name}</h4>
+          <h4>${laptopList[i].name}</h4>
           </div>
           <div class="product-price">
-          <h5>${pcList[i].price}</h5></div>
-          <div class="product-subcategory">${pcList[i].category+": "+pcList[i].subcategory}</div>
-          <div class="product-ram">${"RAM"+": "+pcList[i].ram}</div>
-          <div class="product-storage">${"ROM"+": "+pcList[i].storage}</div>
-          <div class="product-cpu">${"CPU"+": "+pcList[i].cpu}</div>
+          <h5>${laptopList[i].price}</h5></div>
+          <div class="product-subcategory">${laptopList[i].category+": "+laptopList[i].subcategory}</div>
+          <div class="product-ram">${"RAM"+": "+laptopList[i].ram}</div>
+          <div class="product-storage">${"ROM"+": "+laptopList[i].storage}</div>
+          <div class="product-cpu">${"CPU"+": "+laptopList[i].cpu}</div>
         </div>
         <button class="product-btn" onclick="addProductToCart(this)">Thêm vào giỏ hàng</button>
     `;
