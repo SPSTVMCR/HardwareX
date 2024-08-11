@@ -368,18 +368,6 @@ footer h3 {
   background-color: var(--bs-info);
 }
 
-.banner {
-  position: relative;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  height: 400px;
-  background-image: url("../../assets/HARDWAREX.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: fade-in 1s;
-}
-
 /* Dropdown Button */
 .dropbtn {
   background-color: #3498DB;
@@ -431,235 +419,131 @@ footer h3 {
   opacity: 1;
 }
 
-.products {
+section {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-items: center;
-  height: -moz-max-content;
-  height: max-content;
-  white-space: nowrap;
-  /* Prevent product wrapping */
-  overflow-x: auto;
-  /* Enable horizontal scrolling */
-  scrollbar-color: var(--bs-info) var(--bs-dark);
-}
-.products .product {
-  right: 0;
-  margin: 10px;
-  min-width: 250px;
-  border: var(--bs-info) solid 2px;
-  border-radius: 5px;
-  margin-right: 10px;
-  display: flexbox;
-  transition: all 0.3s;
-  cursor: pointer;
-  background-color: var(--bs-primary);
-}
-.products .product img {
-  width: 100%;
-  height: 100%;
-}
-.products .product .product-info {
-  display: flex;
-  top: 0;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: var(--bs-light);
-  background-color: var(--bs-dark);
-  padding: 5px;
-}
-.products .product .product-category {
-  text-align: left;
-  color: var(--bs-dark);
-  background-color: var(--bs-footer);
-  padding: 5px;
-}
-.products .product .product-name {
-  display: flex;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0px;
-  padding: 2px;
-  height: 20vh;
-  flex-wrap: wrap;
-  text-wrap: wrap;
-  background-color: var(--bs-dark);
-  /* Allow product name to wrap onto multiple lines */
-}
-.products .product .product-btn {
-  width: 90%;
-  transform: translateX(4.5%);
-  display: flex;
   justify-content: center;
-  align-self: center;
-  margin-top: 15px !important;
-  height: 2rem;
-  border-radius: 4px;
-  background-color: var(--bs-secondary);
-  border: none;
+  background-color: var(--bs-footer);
+  position: relative;
+}
+section h1 {
+  text-transform: uppercase;
   color: var(--bs-dark);
-  padding: 5px;
+  font-size: 3rem;
+  font-weight: 800;
+  width: 100vw;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.products .product .product-price {
-  text-align: center;
-  display: block;
-  background-color: var(--bs-secondary);
-  font-size: 1.75rem;
-}
-.products .product .product-price h5 {
-  margin: 0px;
-  margin-bottom: 10px;
-  padding: 5px;
-  color: var(--bs-dark);
-}
-.products .product .product-subcategory, .products .product .product-ram, .products .product .product-storage, .products .product .product-cpu {
-  text-align: center;
-  color: var(--bs-dark);
-}
-.products .product .product-btn:hover {
-  background-color: var(--bs-success);
-}
-.products .product:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  border: var(--bs-success) solid 2px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0;
+  background-color: var(--bs-info);
 }
 
-.hot-products h1 {
-  background-color: var(--bs-info);
+.about-section {
+  margin-top: 3rem;
+}
+.about-section .about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.about-section .about-content p {
+  color: var(--bs-light);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  padding: 0;
+}
+
+.product-section {
+  background-color: var(--bs-primary);
+}
+.product-section h1 {
+  background-color: var(--bs-success);
+}
+.product-section .pabout-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.product-section .pabout-content p {
   color: var(--bs-dark);
-  padding: 10px;
-  padding-left: 1vw;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  padding: 0;
+}
+
+.contact-section {
+  background-color: var(--bs-body-bg);
+}
+.contact-section h1 {
+  background-color: var(--bs-warning);
+  color: var(--bs-light);
+}
+.contact-section .conabout-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.contact-section .conabout-content p {
+  color: var(--bs-light);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 0rem;
+  margin-right: 3rem;
+  position: relative;
+}
+
+.disclaimer-section {
+  background-color: var(--bs-primary);
+}
+.disclaimer-section h1 {
+  background-color: var(--bs-danger);
+}
+.disclaimer-section .disabout-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.disclaimer-section .disabout-content p {
+  color: var(--bs-dark);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+img {
+  max-width: 700px;
+  max-height: 500px;
+  margin: 0;
 }
 
 .animated-h1 {
   animation: swipe-in-left-to-right 0.8s;
-}
-
-.mac-products {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-items: center;
-  height: -moz-max-content;
-  height: max-content;
-  white-space: nowrap;
-  /* Prevent product wrapping */
-  overflow-x: auto;
-  /* Enable horizontal scrolling */
-  scrollbar-color: var(--bs-info) var(--bs-dark);
-}
-.mac-products .product {
-  right: 0;
-  margin: 10px;
-  min-width: 250px;
-  border: var(--bs-info) solid 2px;
-  border-radius: 5px;
-  margin-right: 10px;
-  display: flexbox;
-  transition: all 0.3s;
-  cursor: pointer;
-  background-color: var(--bs-primary);
-}
-.mac-products .product img {
-  width: 100%;
-  height: 100%;
-}
-.mac-products .product .product-info {
-  display: flex;
-  top: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--bs-light);
-  background-color: var(--bs-dark);
-  padding: 5px;
-}
-.mac-products .product .product-category {
-  text-align: left;
-  color: var(--bs-dark);
-  background-color: var(--bs-footer);
-  padding: 5px;
-}
-.mac-products .product .product-name {
-  display: flex;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0px;
-  padding: 2px;
-  height: 20vh;
-  flex-wrap: wrap;
-  text-wrap: wrap;
-  background-color: var(--bs-dark);
-  /* Allow product name to wrap onto multiple lines */
-}
-.mac-products .product .product-btn {
-  width: 90%;
-  transform: translateX(4.5%);
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  margin-top: 15px !important;
-  height: 2rem;
-  border-radius: 4px;
-  background-color: var(--bs-secondary);
-  border: none;
-  color: var(--bs-dark);
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.mac-products .product .product-price {
-  text-align: center;
-  display: block;
-  background-color: var(--bs-secondary);
-  font-size: 1.75rem;
-}
-.mac-products .product .product-price h5 {
-  margin: 0px;
-  margin-bottom: 10px;
-  padding: 5px;
-  color: var(--bs-dark);
-}
-.mac-products .product .product-subcategory, .mac-products .product .product-ram, .mac-products .product .product-storage, .mac-products .product .product-cpu {
-  text-align: center;
-  color: var(--bs-dark);
-}
-.mac-products .product .product-btn:hover {
-  background-color: var(--bs-success);
-}
-.mac-products .product:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  border: var(--bs-success) solid 2px;
-}
-
-.macbooks h1 {
-  background-color: var(--bs-light);
-  color: var(--bs-dark);
-  padding: 8px;
-  padding-left: 1vw;
-  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
@@ -721,13 +605,6 @@ footer h3 {
     padding-bottom: 2px;
     margin-right: 0px;
   }
-  .banner {
-    background-image: url("../../assets/HARDWAREXmobile.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 0px;
-  }
   .navbar.responsive .icon {
     position: absolute;
     right: 0;
@@ -749,12 +626,4 @@ footer h3 {
   #___gcse_0 {
     width: 100vw !important;
   }
-  .hot-products h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-  .macbooks h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=about.css.map */

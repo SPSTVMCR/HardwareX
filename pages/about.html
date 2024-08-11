@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home/home.min.css">
+    <link rel="stylesheet" href="../css/about/about.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +24,8 @@
     <!--Navigation bar-->
     <div id="topnav" class="navbar">
         <a class="logo">HARDWAREX</a>
-        <a href="#" class="active">Trang chủ</a>
-        <a href="">Giới thiệu</a>
+        <a href="home.html">Trang chủ</a>
+        <a href="#" class="active">Giới thiệu</a>
         <div class="dropdown">
             <button class="dropbtn" onclick="toggleDropdown(); iconDropdown()">Sản phẩm
                 <i id="icon-dropdown" class="fa fa-caret-down"></i>
@@ -59,13 +59,97 @@
 
     <!--Content-->
         <!--Section 1: About HardwareX-->
-        <section class="about-section">
+        <section class="about-section section-class">
             <h1 class="about-title">Giới thiệu</h1>
             <div class="about-container">
                 <div class="about-content">
+                    <img class = "about-img" src="../assets/about.webp" alt="about">
                     <p class="about-text">
-                        
+                            HardwareX được thành lập vào năm 2XXX, với 1 thành viên là SPSTVMCR.
+                            Với kinh nghiệm gần 69 tuần, cùng mục tiêu tạo ra trang web bán hàng ripoff,
+                            chúng tôi mong muốn tạo cho khách hàng một trải nghiệm tốt nhất có thể.
                         </p>
                 </div>
             </div>
         </section>
+        <!--Section 2: Products-->
+        <section class="product-section section-class">
+            <h1 class = "product-title">Các sản phẩm</h1>
+            <div class = "product-about-container">
+                <div class = "pabout-content">
+                <img class = "pabout-img" src="../assets/productimage.jpg" alt="about">
+                <p class="pabout-text">
+                        Các sản phẩm của chúng tôi luôn đảm bảo chất lượng, chính hãng và kèm theo các chính sách
+                        bảo hành hấp dẫn.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--Section 3: Contact -->
+        <section class="contact-section section-class">
+            <h1 class = "contact-title">Liên hệ</h1>
+            <div class = "contact-about-container">
+                <div class = "conabout-content">
+                <img class = "conabout-img" src="../assets/contact.webp" alt="about">
+                <p class="conabout-text">
+                    Github: <a href="https://github.com/spstvmcr/hardwarex">https://github.com/spstvmcr/hardwarex</a>
+                </p>
+                </div>
+            </div>
+        </section>
+        <!--Section 4: Disclaimer-->
+        <section class="disclaimer-section section-class">
+            <h1 class = "disclaimer-title">Ghi chú</h1>
+            <div class = "disclaimer-about-container">
+                <div class = "disabout-content">
+                <img class = "disabout-img" src="../assets/hidethepain.jpg" alt="about">
+                <p class="disabout-text">
+                    Như bạn có thể đã nhận ra, toàn bộ trang web này chỉ là một trang web mẫu để bạn có thể tự chỉnh sửa :)
+                    Trang web này thực chất chỉ là 1 bài sh*tpost lớn, các sản phẩm có thể có thật nhưng công ty HardwareX không hề tồn tại,
+                    Thông tin cá nhân được lưu trữ trong trình duyệt và không được thu thập bởi người tạo ra trang web này.
+                </p>
+                </div>
+            </div>
+        </section>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="row primary">
+                <div class="column about">
+                    <h3>Kết nối</h3>
+                    <p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        123 Sesame Street :)
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/megalox/about" target="_blank"><i
+                                class="fa fa-facebook-square"></i></a>
+                        <a href="https://github.com/SPSTVMCR/JSA_final_project" target="_blank"><i
+                                class="fa fa-github-square"></i></a>
+                        <a href="https://www.youtube.com/channel/UCiftkcPO_bRTEsOB4F4e7qQ" target="_blank"><i
+                                class="fa fa-youtube-square"></i></a>
+                    </div>
+                </div>
+    
+                <div class="column link">
+                    <h3>Liên kết</h3>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Về HARDWAREX</a></li>
+                        <li><a href="#">Tài khoản</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+    
+                <div class="row copyright">
+                    <div>
+                        <p>@SPSTVMCR 2024, BSD 3-Clause-Clear</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Functional JS -->
+        <script src="../js/about.js"></script>
+    </body>
+
+</html>
