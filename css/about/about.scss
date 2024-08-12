@@ -690,4 +690,34 @@ img {
     #___gcse_0 {
         width: 100vw !important;
     }
+    .about-section, .contact-section, .disclaimer-section, .product-section {
+        h1 {
+            font-size: 1.5rem;
+        }
+        .about-text, .pabout-text, .conabout-text {
+            font-size: 1rem;
+        }
+        .about-img, .pabout-img, .conabout-img {
+            max-width: 300px;
+            max-height: 200px;
+        }
+
+    }
+    .about-content, .pabout-content, .conabout-content, .disabout-content {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100vw;
+        height: fit-content;
+        p {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-left: 1rem !important;
+            margin-right: 1rem !important;
+            position: relative;
+            text-align: center;
+        }
+    }
 }
