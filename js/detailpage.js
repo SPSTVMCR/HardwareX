@@ -57,7 +57,7 @@ let productCategory = document.querySelector(".product-category");
 let loggedIn = localStorage.getItem("loggedIn") || "false";
 function addToCart () {
     if (loggedIn === "false") {
-        window.location.href = "../pages/login.html";
+        window.location.href = "../login.html";
     } else {
         if (localStorage.getItem("cart") === null) {
             let cart = [];
