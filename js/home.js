@@ -3,6 +3,8 @@ let loggedIn = localStorage.getItem("loggedIn") || "false";
 
 let topnav = document.getElementById("topnav");
 
+
+
 let hotProductList = [
   {
     name: "Laptop Asus TUF Gaming A15 FA506NF-HN005W (AMD Ryzen 5-7535HS)",
@@ -210,16 +212,25 @@ function expand() {
   }
 };
 
+let backToTop = document.getElementById("back-to-top");
 let currentScrollPos = window.scrollY;
 window.addEventListener('scroll', function () {
   if (currentScrollPos < 50) {
     topnav.style.top = "0";
+    backToTop.style.display = "none";
   } else {
     topnav.style.top = "-50px";
+    backToTop.style.display = "block";
   }
   currentScrollPos = window.scrollY;
 });
 
+//Back to top button
+function backToTopFn() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  currentScrollPos = window.scrollY;
+}
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */

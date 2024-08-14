@@ -749,6 +749,26 @@ footer h3 {
     }
 }
 
+#back-to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; 
+    border: none; 
+    outline: none;
+    opacity: 0.5; 
+    background-color: var(--bs-info);
+    color: var(--bs-dark); 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 50%; 
+    font-size: 18px; 
+    transition: all 0.3s;
+    &:hover {
+        background-color: var(--bs-success);
+    }
+}
 //Responsive
 @media screen and (max-width: 600px) {
 
@@ -871,5 +891,8 @@ footer h3 {
         font-size: 20px;
         text-align: center;
     }
-
+    #back-to-top {
+        right: 10px;
+        bottom: 10px;
+    }
 }
